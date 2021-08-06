@@ -15,7 +15,6 @@ uvicorn = "*"
 pydantic = "*"
 torch = "*"
 transformers = "*"
-httpie = "*"
 
 [requires]
 python_version = "3.8"
