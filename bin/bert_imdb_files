@@ -1,0 +1,8 @@
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/.gitattributes 
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/README.md 
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/config.json
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/pytorch_model.bin 
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/special_tokens_map.json
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/tokenizer_config.json
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/training_args.bin
+https://huggingface.co/lvwerra/bert-imdb/resolve/main/vocab.txt

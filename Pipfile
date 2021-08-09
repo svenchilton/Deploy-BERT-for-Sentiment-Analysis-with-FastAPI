@@ -3,18 +3,15 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[dev-packages]
-black = "==19.10b0"
-isort = "*"
-flake8 = "*"
-gdown = "*"
-
 [packages]
 fastapi = "*"
 uvicorn = "*"
 pydantic = "*"
 torch = "*"
 transformers = "*"
+pyngrok = "*"
+nest_asyncio = "*"
+httpie = "*"
 
 [requires]
 python_version = "3.8"
