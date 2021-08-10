@@ -26,15 +26,10 @@ class Model:
         self.classifier = pipeline('sentiment-analysis', model=model, tokenizer=self.tokenizer, 
                                    device=self.device, return_all_scores=False)
 
-        #self.classifier = classifier.to(self.device)
 
     def predict(self, text):
         return self.classifier(text)
 
 
-# model = Model()
-
-
 def get_model():
-    #return model
     return Model()
