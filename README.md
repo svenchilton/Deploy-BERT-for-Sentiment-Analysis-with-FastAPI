@@ -96,6 +96,12 @@ Install the dependencies:
 pipenv install --dev
 ```
 
+Enter the virtual environment which the previous command created:
+
+```sh
+pipenv shell
+```
+
 Download the pre-trained model:
 
 ```sh
