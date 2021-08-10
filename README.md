@@ -108,13 +108,13 @@ Download the pre-trained model:
 Start the HTTP server:
 
 ```sh
-bin/start_server
+./bin/start_server
 ```
 
 Send a test request:
 
 ```sh
-bin/test_request
+./bin/test_request
 ```
 
 ## License
