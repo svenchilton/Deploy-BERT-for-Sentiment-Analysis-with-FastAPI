@@ -1,4 +1,4 @@
-# Deploy BERT for Sentiment Analsysi with FastAPI
+# Deploy BERT for Sentiment Analysis with FastAPI
 
 Deploy a pre-trained BERT model for Sentiment Analysis as a REST API using FastAPI
 
