@@ -10,7 +10,6 @@ The model is trained to classify sentiment (negative or positive) on the [IMDB 5
 ```bash
 http POST http://127.0.0.1:8000/predict text="Most perceptive observation, Captain"
 ```
-
 The response will look something like this:
 
 ```js
@@ -28,7 +27,6 @@ The response will look something like this:
 ```bash
 http POST http://127.0.0.1:8000/predict text:='["Most perceptive observation, Captain", "I aint afraid of no ghost", "The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting"]'
 ```
-
 The response will look something like this:
 ```js
 {
@@ -59,7 +57,6 @@ Most perceptive observation, Captain
 I ain't afraid of no ghost! 
 The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting
 ```
-
 The response will look something like this: 
 ```js
 {
