@@ -2,7 +2,8 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from typing import Dict, List, Union
 
-from .classifier.model import Model, get_model
+# from .classifier.model import Model, get_model
+from model import Model, get_model
 
 app = FastAPI()
 
@@ -28,3 +29,15 @@ def predict(request: SentimentRequest, model: Model = Depends(get_model)):
         text = text.split('\n')
     results = model.predict(text)
     return SentimentResponse(results=results)
+
+
+if __name__ == "__main__":
+    import nest_asyncio
+    from pyngrok import ngrok
+    import uvicorn
+
+    ngrok_tunnel = ngrok.connect(8000)
+    print('Public URL:', ngrok_tunnel.public_url)
+    nest_asyncio.apply()
+    uvicorn.run('api:app', port=8000)
+
