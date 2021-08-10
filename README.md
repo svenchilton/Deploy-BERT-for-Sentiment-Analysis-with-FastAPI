@@ -4,7 +4,7 @@ Deploy a pre-trained BERT model for Sentiment Analysis as a REST API using FastA
 
 ## Demo
 
-The model is trained to classify sentiment (negative or positive) on the [IMDB 50K movie review dataset](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews). From the command line, you can use the web service to make inferences in the following ways:
+[The model](https://huggingface.co/lvwerra/bert-imdb) is trained to classify sentiment (negative or positive) on the [IMDB 50K movie review dataset](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews). From the command line, you can use the web service to make inferences in the following ways:
 
 1. A single string
 ```bash
