@@ -2,7 +2,6 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from typing import Dict, List, Union
 
-# from .classifier.model import Model, get_model
 from model import Model, get_model
 
 app = FastAPI()
@@ -37,6 +36,8 @@ if __name__ == "__main__":
     import uvicorn
 
     ngrok_tunnel = ngrok.connect(8000)
+    with open('public_url', 'w') as public_url_file:
+        public_url_file.write(ngrok_tunnel.public_url)
     print('Public URL:', ngrok_tunnel.public_url)
     nest_asyncio.apply()
     uvicorn.run('api:app', port=8000)
