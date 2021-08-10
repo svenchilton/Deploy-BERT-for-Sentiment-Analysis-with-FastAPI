@@ -1,9 +1,7 @@
 {
     "BERT_MODEL": "./bert-imdb",
-    "PRE_TRAINED_MODEL": "./bert-imdb/pytorch_model.bin",
     "CLASS_NAMES": [
         "negative",
         "positive"
-    ],
-    "MAX_SEQUENCE_LEN": 160
+    ]
 }
