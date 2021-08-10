@@ -10,7 +10,7 @@ Deploy a pre-trained BERT model for Sentiment Analysis as a REST API using FastA
 ```bash
 http POST http://127.0.0.1:8000/predict text="Most perceptive observation, Captain"
 ```
-The response will look something like this:
+    The response will look something like this:
 
 ```js
 {
@@ -27,7 +27,7 @@ The response will look something like this:
 ```bash
 http POST http://127.0.0.1:8000/predict text:='["Most perceptive observation, Captain", "I aint afraid of no ghost", "The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting"]'
 ```
-The response will look something like this:
+    The response will look something like this:
 ```js
 {
     "results": [
@@ -57,7 +57,7 @@ Most perceptive observation, Captain
 I ain't afraid of no ghost! 
 The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting
 ```
-The response will look something like this: 
+    The response will look something like this: 
 ```js
 {
     "results": [
@@ -76,7 +76,7 @@ The response will look something like this:
     ]
 }
 ```
-Notice how the model perceives the middle passage as significantly more positive in this example than the prior one, thanks to the addition of an exclamation point. 
+    Notice how the model perceives the middle passage as significantly more positive in this example than the prior one, thanks to the addition of an exclamation point. 
 
 <!--- 
 You can also [read the complete tutorial here](https://www.curiousily.com/posts/deploy-bert-for-sentiment-analysis-as-rest-api-using-pytorch-transformers-by-hugging-face-and-fastapi/)
