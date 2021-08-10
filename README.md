@@ -101,6 +101,7 @@ Download the pre-trained model:
 ```sh
 ./bin/download_model
 ```
+The script will create new directory within `Deploy-BERT-for-Sentiment-Analysis-with-FastAPI` named `bert-imdb`, which will contain the relevant model files.
 
 ## Test the setup
 
