@@ -2,9 +2,21 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from typing import Dict, List, Union
 
+# Import from model.py
 from model import Model, get_model
 
-import ml_monitor
+# If a local copy of the ml_monitor repo exists 
+# (available at https://github.com/wiatrak2/ml_monitor), 
+# import it
+import sys, os
+current_dir = os.getcwd()
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+ml_monitor_dir = os.path.join(parent_dir, 'ml_monitor')
+if os.path.exists(ml_monitor_dir):
+    import ml_monitor
+    my_monitor = ml_monitor.Monitor()
+    my_monitor.start()
 
 app = FastAPI()
 
@@ -43,4 +55,9 @@ if __name__ == "__main__":
     print('Public URL:', ngrok_tunnel.public_url)
     nest_asyncio.apply()
     uvicorn.run('api:app', port=8000)
+    # Once server stops running, stop monitoring as well
+    print(f'Stopped app server {ngrok_tunnel.public_url}')
+    if os.path.exists(ml_monitor_dir):
+        print(f'Now stopping Prometheus and Grafana ML monitoring')
+        my_monitor.stop()
 
