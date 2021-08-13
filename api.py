@@ -4,6 +4,8 @@ from typing import Dict, List, Union
 
 from model import Model, get_model
 
+import ml_monitor
+
 app = FastAPI()
 
 
