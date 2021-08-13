@@ -124,6 +124,10 @@ Send a test request:
 ./bin/test_request
 ```
 
+## Notes
+
+1. If necessary, change the value of `python_version` in `Pipfile` from the default `"3.8"`. The app should work with Python 3.7 and up.
+
 ## License
 
 MIT
