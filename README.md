@@ -114,8 +114,9 @@ The script will create new directory within `Deploy-BERT-for-Sentiment-Analysis-
 Start the HTTP server:
 
 ```sh
-./bin/start_server
+python sentiment_analyzer/api.py &
 ```
+Make sure to include the `&` at the end of the line to start the server in the background and allow for the continued use of the terminal.
 
 Send a test request:
 
