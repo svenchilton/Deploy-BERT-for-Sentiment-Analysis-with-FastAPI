@@ -4,7 +4,7 @@ Deploy a pre-trained BERT model for Sentiment Analysis as a REST API using FastA
 
 ## Demo
 
-[The model](https://huggingface.co/lvwerra/bert-imdb) is trained to classify sentiment (negative or positive) on the [IMDB 50K movie review dataset](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews). From the command line, you can use the web service to make inferences in the following ways:
+[The model](https://huggingface.co/lvwerra/bert-imdb) is trained to classify sentiment (negative or positive) on the [IMDB 50K movie review dataset](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews). The webservice is hosted at `localhost`, aka `127.0.0.1`, and at a randomly generated ngrok URL which other users can access. The ngrok address is printed in the command line when generated and saved in the generated file `public_url` for later use. From the command line, you can use the web service to make inferences in the following ways:
 
 1. A single string
 ```bash
@@ -24,7 +24,7 @@ The response will look something like this:
 
 2. A list of strings
 ```bash
-http POST http://127.0.0.1:8000/predict text:='["Most perceptive observation, Captain", "I aint afraid of no ghost", "The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting"]'
+http POST localhost:8000/predict text:='["Most perceptive observation, Captain", "I aint afraid of no ghost", "The Star Wars prequels have stunning visual effects, but middling storytelling, directing, and acting"]'
 ```
 The response will look something like this:
 ```js
@@ -48,7 +48,7 @@ The response will look something like this:
 
 3. A text file in which each line contains a passage to be analyzed
 ```bash
-http POST http://127.0.0.1:8000/predict text=@example.txt
+http POST $(more public_url)/predict text=@example.txt
 ```
 where `example.txt` contains the lines
 ```
@@ -114,7 +114,7 @@ The script will create new directory within `Deploy-BERT-for-Sentiment-Analysis-
 Start the HTTP server:
 
 ```sh
-python sentiment_analyzer/api.py &
+python api.py &
 ```
 Make sure to include the `&` at the end of the line to start the server in the background and allow for the continued use of the terminal.
 
