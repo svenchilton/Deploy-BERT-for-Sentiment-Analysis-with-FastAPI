@@ -13,10 +13,17 @@ current_dir = os.getcwd()
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir)
 ml_monitor_dir = os.path.join(parent_dir, 'ml_monitor')
+# ml_monitor_dir = os.path.join(current_dir, 'ml_monitor')
 if os.path.exists(ml_monitor_dir):
+    # Ensure that the ml_monitor module is set up
+    os.chdir(ml_monitor_dir)
+    import subprocess
+    subprocess.run('pip install .', shell=True)
+    os.chdir(current_dir)
     import ml_monitor
     my_monitor = ml_monitor.Monitor()
     my_monitor.start()
+
 
 app = FastAPI()
 

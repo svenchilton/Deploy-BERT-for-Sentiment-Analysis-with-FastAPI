@@ -77,6 +77,8 @@ The response will look something like this:
 ```
 Notice how the model perceives the middle passage as significantly more positive in this example than the prior one, thanks to the addition of an exclamation point. 
 
+You may mix and match the server options with the types of texts entered into the web API.
+
 <!--- 
 You can also [read the complete tutorial here](https://www.curiousily.com/posts/deploy-bert-for-sentiment-analysis-as-rest-api-using-pytorch-transformers-by-hugging-face-and-fastapi/)
 --->
@@ -107,7 +109,7 @@ Download the pre-trained model:
 ```sh
 ./bin/download_model
 ```
-The script will create new directory within `Deploy-BERT-for-Sentiment-Analysis-with-FastAPI` named `bert-imdb`, which will contain the relevant model files.
+The script will create a new directory within `Deploy-BERT-for-Sentiment-Analysis-with-FastAPI` named `bert-imdb`, which will contain the relevant model files.
 
 ## Test the setup
 
@@ -127,6 +129,9 @@ Send a test request:
 ## Notes
 
 1. If necessary, change the value of `python_version` in `Pipfile` from the default `"3.8"`. The app should work with Python 3.7 and up.
+2. As yet, my attempts to dockerize this app (see `Dockerfile`) and add Prometheus/Grafana monitoring with the `ml_monitor` [repo](https://github.com/wiatrak2/ml_monitor) have failed. 
+3. There is currently no front end to the web app. 
+4. Special thanks to [Leandro von Werra](https://huggingface.co/lvwerra) for help with integrating the bert-imdb model.
 
 ## License
 
