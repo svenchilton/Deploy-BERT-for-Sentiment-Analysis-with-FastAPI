@@ -146,3 +146,15 @@ cython_debug/
 *.code-workspace
 
 assets/*.bin
+
+# Test files and directories to ignore
+Dockerfile.New
+Dockerfile.old
+Dockerfile.test
+Test.Pipfile
+Test.Pipfile.lock
+bert-imdb/
+bin/run_public_server
+public_url
+setup.py
+test.py
